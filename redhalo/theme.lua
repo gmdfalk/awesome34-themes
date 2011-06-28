@@ -1,4 +1,4 @@
--- redhalo, awesome3 theme, by
+-- redhalo, awesome3 theme
 
 --{{{ Main
 require("awful.util")
@@ -45,7 +45,7 @@ end
 
 theme.font = "profont 8"
 
-theme.fg_normal = "#f8f8f2"
+theme.fg_normal = "#bcbcbc"
 theme.fg_focus = "#262729"
 theme.fg_urgent = "#262729"
 --theme.fg_title = "#66d9ef"
@@ -68,7 +68,7 @@ theme.border_marked = "#ce5666"
 --theme.taglist_squares_unsel = themedir .. "/taglist/squaref_b-green.png"
 --}}}
 --{{{ F-f-float
-theme.tasklist_floating_icon = themedir .. "/layouts-huge/floating-red.png"
+theme.tasklist_floating_icon = themedir .. "/layouts-huge/floating-greyish.png"
 --}}}
 -- {{{ Layout icons
 theme.layout_tile       = themedir .. "/layouts-huge/tile-blue.png"
