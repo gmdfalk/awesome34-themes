@@ -1,4 +1,4 @@
--- dunz0r, awesome3 theme, by dunz0r
+-- dunzor, awesome3 theme, by dunz0r
 
 --{{{ Main
 require("awful.util")
@@ -14,7 +14,7 @@ end
 sharedicons   = shared .. "/icons"
 sharedthemes  = shared .. "/themes"
 themes        = config .. "/themes"
-themename     = "/dunz0r"
+themename     = "/dunzor"
 if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
        themes = sharedthemes
 end

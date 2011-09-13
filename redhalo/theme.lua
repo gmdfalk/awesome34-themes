@@ -46,6 +46,7 @@ end
 theme.font = "profont 8"
 
 theme.fg_normal = "#bcbcbc"
+--theme.fg_normal = "#f8f8f8"
 theme.fg_focus = "#262729"
 theme.fg_urgent = "#262729"
 --theme.fg_title = "#66d9ef"
