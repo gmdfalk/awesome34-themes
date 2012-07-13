@@ -1,9 +1,15 @@
 #!/bin/bash
 #
 
-THEMEDIR="/home/demian/.config/awesome/themes/niceandclean"
+THEMEDIR="/home/kyah/.config/awesome/themes/niceandclean"
 
 case "$1" in
+	10inch)	killall conky
+		awsetbg "$THEMEDIR"/background-large.jpg
+		conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkyhr &
+		conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkymin &
+		conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkystats &
+		conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkydate &;;
 	1920)	killall conky
 		awsetbg "$THEMEDIR"/background.jpg
 		conky -c "$THEMEDIR"/conky/nice-and-clean-1920/conkyhr &
@@ -14,8 +20,8 @@ case "$1" in
 		awsetbg "$THEMEDIR"/background-large.jpg
 		conky -c "$THEMEDIR"/conky/nice-and-clean-large/conkyhr &
 		conky -c "$THEMEDIR"/conky/nice-and-clean-large/conkymin &
-		conky -c "$THEMEDIR"/conky/nice-and-clean-large/conkydate &
-		conky -c "$THEMEDIR"/conky/nice-and-clean-large/conkystats &;;
+		conky -c "$THEMEDIR"/conky/nice-and-clean-large/conkystats &
+		conky -c "$THEMEDIR"/conky/nice-and-clean-large/conkydate &;;
 	*)	killall conky
 		awsetbg "$THEMEDIR"/background.jpg
 		conky -c "$THEMEDIR"/conky/nice-and-clean/conkyhr &

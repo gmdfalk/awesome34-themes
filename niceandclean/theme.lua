@@ -5,6 +5,9 @@ require("awful.util")
 
 theme = {}
 
+-- possible layouts are:[10ich|large|1920|""]
+conky_layout  = "10inch" 
+
 home          = os.getenv("HOME")
 config        = awful.util.getdir("config")
 shared        = "/usr/share/awesome"
@@ -28,7 +31,7 @@ wpscript      = home .. "/.wallpaper"
 wpscript2     = themedir .. "/niceandclean.sh"
 
 if awful.util.file_readable(wpscript2) then
-	theme.wallpaper_cmd = { "sh " .. wpscript2 }
+	theme.wallpaper_cmd = { "sh " .. wpscript2 .. " " .. conky_layout }
 elseif awful.util.file_readable(wallpaper1) then
 	theme.wallpaper_cmd = { "awsetbg " .. wallpaper1 }
 elseif awful.util.file_readable(wallpaper2) then
