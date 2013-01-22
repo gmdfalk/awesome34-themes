@@ -383,12 +383,12 @@ awful.rules.rules = {
 
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
-client.add_signal("manage", function (c, startup)
+client.connect_signal("manage", function (c, startup)
     -- Add a titlebar
     -- awful.titlebar.add(c, { modkey = modkey })
 
     -- Enable sloppy focus
-    c:add_signal("mouse::enter", function(c)
+    c:connect_signal("mouse::enter", function(c)
         if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
             and awful.client.focus.filter(c) then
             client.focus = c
@@ -408,15 +408,15 @@ client.add_signal("manage", function (c, startup)
     end
 end)
 
-client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- {{{ Tag signal handler - selection
 -- - ASCII tags 1 [2] 3 4...
 --   - start with tag 1 named [1] in tag setup
 for s = 1, screen.count() do
     for t = 1, #tags[s] do
-        tags[s][t]:add_signal("property::selected", function ()
+        tags[s][t]:connect_signal("property::selected", function ()
            if tags[s][t].selected then
                 tags[s][t].name = "[" .. tags[s][t].name .. "]"
             else
