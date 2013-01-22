@@ -1,7 +1,8 @@
 -- zenburn-red, awesome3 theme, by Adrian C. (anrxc), modified by jessor
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

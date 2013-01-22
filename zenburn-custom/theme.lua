@@ -1,7 +1,8 @@
 -- zenburn-custom, awesome3 theme, by Adrian C. (anrxc)
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

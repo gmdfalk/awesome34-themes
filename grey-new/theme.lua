@@ -1,7 +1,8 @@
 -- grey-new, awesome3 theme, by Andreas Persson (greyscale, grey)
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

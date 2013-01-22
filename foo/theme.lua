@@ -1,7 +1,8 @@
 -- foo, high contrast awesome3 theme, by rob
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

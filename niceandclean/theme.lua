@@ -1,7 +1,8 @@
 -- niceandclean, awesome3 theme, by Blazeix, based off of ghost1227's openbox theme.
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

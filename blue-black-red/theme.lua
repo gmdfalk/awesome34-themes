@@ -1,7 +1,8 @@
 -- blue-black-red, awesome3 theme
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

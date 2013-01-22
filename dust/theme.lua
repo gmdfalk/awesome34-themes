@@ -1,7 +1,8 @@
 -- dust, awesome3 theme, based off of the gtk+ theme dust, by tdy
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

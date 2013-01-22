@@ -1,7 +1,8 @@
 -- fhuizing, awesome3 theme, by fhuizing
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

@@ -1,7 +1,8 @@
 -- dunzor, awesome3 theme, by dunz0r
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 
