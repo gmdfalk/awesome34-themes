@@ -1,7 +1,8 @@
 -- lined, awesome3 theme, by him
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

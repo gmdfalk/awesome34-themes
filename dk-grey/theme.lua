@@ -1,7 +1,8 @@
 -- dk-grey, awesome3 theme, by bioe007 perrydothargraveatgmaildotcom
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

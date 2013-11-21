@@ -2,7 +2,8 @@
 -- licensed under the Creative Commons Attribution-Share (Alike License: http://creativecommons.org/licenses/by-sa/3.0/)
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 

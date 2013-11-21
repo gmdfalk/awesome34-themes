@@ -2,7 +2,8 @@
 -- If you want SVGs and extras, get them from garoth.com/awesome/sky-theme
 
 --{{{ Main
-require("awful.util")
+local awful = require("awful")
+awful.util = require("awful.util")
 
 theme = {}
 
