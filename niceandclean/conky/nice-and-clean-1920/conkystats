@@ -28,6 +28,6 @@ override_utf8_locale yes
 
 TEXT
 ${color ce2c51}RAM: ${goto 160}CPU: ${goto 300}Battery: ${goto 450}System:     
-${color ffffff}${mem} ${goto 160}${cpu cpu0}% ${goto 300}${if_smapi_bat_installed 0}${smapi_bat_perc 0}%${else}${battery_percent}%${endif} ${goto 450}${kernel}${color}
+${color ffffff}${memperc}% ${goto 160}${cpu cpu0}% ${goto 300}${if_smapi_bat_installed 0}${smapi_bat_perc 0}%${else}${battery_percent}%${endif} ${goto 450}${kernel}${color}
 ${color grey}${memfree} ${goto 160}${freq} ${goto 300}${if_smapi_bat_installed 0}${smapi_bat_power 0}W${else}N/A${endif} ${goto 450}${ibm_fan} rpm${color}
-${color 737373}${memmax} ${goto 160}${exec echo $(cat /proc/acpi/ibm/thermal | cut -c15-16)}°C ${goto 300}${if_smapi_bat_installed 0}${exec ~/.scripts/smapi_remaining.sh}${else}${battery_time}${endif} ${goto 450}${if_gw}${exec echo $(netcfg current)}${else}N/A${endif}${color}
+${color 737373}${memmax} ${goto 160}${exec echo $(cat /proc/acpi/ibm/thermal | cut -c15-16)}°C ${goto 300}${if_smapi_bat_installed 0}${exec ~/.scripts/smapi_remaining.sh}${else}${battery_time}${endif} ${goto 450}${if_gw}${exec echo $(netctl list | awk '/*/ {print $2}')}${else}N/A${endif}${color}

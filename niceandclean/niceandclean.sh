@@ -1,9 +1,15 @@
 #!/bin/bash
 #
 
-THEMEDIR="/home/demian/.config/awesome/themes/niceandclean"
+THEMEDIR="$HOME/.config/awesome/themes/niceandclean"
 
 case "$1" in
+        10inch)	killall conky
+                awsetbg "$THEMEDIR"/background-large.jpg
+                conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkyhr &
+                conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkymin &
+                conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkystats &
+                conky -c "$THEMEDIR"/conky/nice-and-clean-10inch/conkydate &;;
 	1920)	killall conky
 		awsetbg "$THEMEDIR"/background.jpg
 		conky -c "$THEMEDIR"/conky/nice-and-clean-1920/conkyhr &
