@@ -103,7 +103,7 @@ layout_widget:buttons(awful.util.table.join(
     end)
 ))
 layout_timer = timer({ timeout = .1})
-layout_timer:connect_signal("timeout", function()
+layout_timer:add_signal("timeout", function()
     layout = awful.layout.get()
     if layout.name == "tile" then
         layout.label = "v"
@@ -172,8 +172,8 @@ pacman_widget:buttons(awful.util.table.join(
 		awful.util.spawn(terminal .. " -name 'pacman' -e yaourt -Syyeu --aur")
 	end)
 ))
-pacman_widget:connect_signal("mouse::enter", function () pacman_widget.bg = beautiful.bg_hover end)
-pacman_widget:connect_signal("mouse::leave", function () pacman_widget.bg = beautiful.bg_normal end)
+pacman_widget:add_signal("mouse::enter", function () pacman_widget.bg = beautiful.bg_hover end)
+pacman_widget:add_signal("mouse::leave", function () pacman_widget.bg = beautiful.bg_normal end)
 
 -- Volume widget
   volume_widget = widget({ type = "textbox"})
@@ -523,10 +523,10 @@ root.keys(globalkeys)
 
 -- Signals
 -- Signal function to execute when a new client appears.
-client.connect_signal("manage",
+client.add_signal("manage",
 function (c, startup)
 	-- Enable sloppy focus
-	c:connect_signal("mouse::enter",
+	c:add_signal("mouse::enter",
 	function(c)
 		if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
 			and awful.client.focus.filter(c) then
