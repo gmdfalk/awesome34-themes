@@ -1,0 +1,23 @@
+# rear-window theme for SLiM
+# slackhack@linuxmail.org
+
+# Messages (ie: shutdown)
+msg_color                 #FFFFFF
+msg_font                  DejaVu Sans:size=12:bold
+msg_x                     12%
+msg_y                     765
+msg_shadow_xoffset        1
+msg_shadow_yoffset        1
+msg_shadow_color          #333333
+
+background_style          stretch
+
+input_panel_x             12%
+input_panel_y             88%
+input_name_x              65
+input_name_y              19
+input_font          	    DejaVu Sans:size=12:bold
+input_color               #FFFFFF
+input_shadow_xoffset      1
+input_shadow_yoffset      1
+input_shadow_color        #333333
